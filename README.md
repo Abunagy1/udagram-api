@@ -100,17 +100,6 @@ Provision the necessary AWS services needed for running the application:
 
 ![Architecture](./images/architecture.png)
 
-## Built With
-
-- [Angular](https://angular.io/) - Single Page Application Framework
-- [Node](https://nodejs.org) - Javascript Runtime
-- [Express](https://expressjs.com/) - Javascript API Framework
-
-## License
-
-[License](LICENSE.txt)
-## Testing
-
 This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
 
 1. `cd starter/udagram-frontend`
