@@ -1,22 +1,13 @@
 # Hosting a Full-Stack Application
-
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
-
 ---
+## Udagram-api
 
-In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
+## Getting Started
 
-After the initial setup, you will learn to interact with the services you started on aws and will deploy manually the application a first time to it. As you get more familiar with the services and interact with them through a CLI, you will gradually understand all the moving parts.
-
-You will then register for a free account on CircleCi and connect your Github account to it. Based on the manual steps used to deploy the app, you will write a config.yml file that will make the process reproducible in CircleCi. You will set up the process to be executed automatically based when code is pushed on the main Github branch.
-
-The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
-
-# Udagram
-
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
-
-
+1. Clone this repo locally into the location of your choice.
+1. Move the content of the udagram-api folder at the root of the repository as this will become the main content of the project.
+1. Open a terminal and navigate to the root of the repo
+1. follow the instructions in the installation step
 
 ### Dependencies
 
@@ -32,8 +23,39 @@ This application is provided to you as an alternative starter project if you do 
 - A S3 bucket for hosting uploaded pictures.
 
 ```
+# Udagram
+
+This project is part of the Udacity FullStack JavaScript nanodegree. The code was given as a starter project and the task was to employ and adapt the code to get it working and hosted on AWS.
+
+The project is available at
+
+http://randomnagies357889.s3-website-us-east-1.amazonaws.com
 
 ### Installation
+
+Run `npm install` in both (udagram-api & udagram-fronend) to download the necessary dependencies.
+
+## Running Udagram locally
+
+You will need to create a `.env` file in `udagram-api` with the following variables set:
+- AWS_ACCESS_KEY_ID
+- AWS_DEFAULT_REGION
+- AWS_SECRET_ACCESS_KEY
+- JWT_SECRET
+- POSTGRES_DB
+- POSTGRES_HOST
+- POSTGRES_PASSWORD
+- POSTGRES_PORT
+- POSTGRES_USERNAME
+- PORT 
+- URL
+
+Open 2 terminal windows:
+1. Navigate to `udagram-api` and run `npm run dev`
+2. Navigate to `udagram-frontend` and run `npm run start`
+
+Open `http://localhost:8080` in the browser.
+
 
 Provision the necessary AWS services needed for running the application:
 
@@ -43,6 +65,50 @@ Provision the necessary AWS services needed for running the application:
 1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
 1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
 
+
+## Configuration Screenshots
+
+### Elastic Beanstalk Environment
+
+![Elastic Beanstalk Environment](./images/eb.png)
+
+### FrontEnd S3 Bucket
+
+![FrontEnd S3 Bucket](./images/frontend_s3.png)
+
+### Backend S3 Bucket
+
+![Backend S3 Bucket](./images/backend_s3.png)
+
+### PostgreSQL RDS database
+
+![PostgreSQL RDS database](./images/rds-database.png)
+
+### CircleCI Pipeline
+
+![CircleCI Pipeline](./images/pipeline.png)
+
+### CircleCI ENV
+
+![CircleCI Pipeline environment variables](./images/pipeline-env.png)
+
+### eb ENV
+
+![Pipeline Schema](./images/eb-env.png)
+
+### Architecture
+
+![Architecture](./images/architecture.png)
+
+## Built With
+
+- [Angular](https://angular.io/) - Single Page Application Framework
+- [Node](https://nodejs.org) - Javascript Runtime
+- [Express](https://expressjs.com/) - Javascript API Framework
+
+## License
+
+[License](LICENSE.txt)
 ## Testing
 
 This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
