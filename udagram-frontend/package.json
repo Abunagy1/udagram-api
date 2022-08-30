@@ -14,7 +14,7 @@
         "deploy1": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
         "deploy2": "aws s3 cp --recursive --acl public-read ./www s3://udagramfrontendbucket/",
         "test": "ng test --watch=false",
-        "lint": "ng lint",
+        "lint": "ng lint --fix",
         "e2e": "ng e2e"
     },
     "private": true,
