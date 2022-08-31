@@ -70,12 +70,12 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - build
-      - hold:
+      - build:
           filters:
             branches:
               only:
-                - master
+                - main
+      - hold:
           type: approval
           requires:
             - build
