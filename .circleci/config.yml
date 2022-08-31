@@ -75,10 +75,10 @@ workflows:
             branches:
               only:
                 - main
-      - hold:
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
+#       - hold:
+#           type: approval
+#           requires:
+#             - build
+      - deploy
+#           requires:
+#             - hold
