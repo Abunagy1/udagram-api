@@ -1,8 +1,8 @@
 branch-defaults:
   default:
     environment: Udagram-env
-# deploy:
-#   artifact: udagram-api/src/Archive.zip
+deploy:
+  artifact: udagram-api/src/Archive.zip
 global:
   application_name: udagram
   branch: main
